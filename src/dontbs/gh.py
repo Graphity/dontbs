@@ -35,7 +35,7 @@ class GHContributions:
     def this_year(self) -> int:
         h2 = self.soup.find('h2')
         if h2:
-            contributions = h2.text.split()[1]
+            contributions = h2.text.split()[0]
             if contributions.isdigit():
                 return int(contributions)
 
