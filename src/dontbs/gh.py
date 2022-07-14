@@ -29,7 +29,7 @@ class GHContributions:
 
     @property
     def this_week(self) -> int:
-        return sum([day['count'] for day in self.year[-1]])
+        return sum([int(day['count']) for day in self.year[-1]])
 
     @property
     def this_year(self) -> int:
