@@ -44,3 +44,7 @@ class GHContributions:
             for day in week:
                 contributions += day['count']
         return contributions
+
+    @property
+    def current_level(self) -> int:
+        return self.year[-1][-1]['level']
