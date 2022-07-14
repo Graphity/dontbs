@@ -16,9 +16,9 @@ class GHContributions:
             for cell in column.find_all('rect'):
                 week.append(
                     {
-                        'count': cell['data-count'],
+                        'count': int(cell['data-count']),
                         'date': cell['data-date'],
-                        'level': cell['data-level']
+                        'level': int(cell['data-level'])
                     }
                 )
             self.year.append(week)
@@ -29,13 +29,13 @@ class GHContributions:
 
     @property
     def this_week(self) -> int:
-        return sum([int(day['count']) for day in self.year[-1]])
+        return sum([day['count'] for day in self.year[-1]])
 
     @property
     def this_year(self) -> int:
         h2 = self.soup.find('h2')
         if h2:
-            contributions = h2.text.split()[0]
+            contributions = h2.text.split()[1]
             if contributions.isdigit():
                 return int(contributions)
 
