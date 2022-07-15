@@ -1,7 +1,7 @@
 import click
 
-from gh import GHContributions
-from utils import *
+from .gh import GHContributions
+from .utils import *
 
 
 @click.group()
