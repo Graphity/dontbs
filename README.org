@@ -20,3 +20,8 @@ Options:
   --goal INTEGER   Set your daily goal of contributions.
   --help           Show this message and exit.
 #+end_src
+
+** Installation
+#+begin_src console
+pip install dontbs
+#+end_src
