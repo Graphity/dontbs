@@ -9,7 +9,7 @@ authors = [
   { name="Graphity" },
 ]
 description = "Don't bullshit"
-readme = "README.org"
+readme = "README.md"
 requires-python = ">=3.7"
 dependencies = [
 	"requests",
