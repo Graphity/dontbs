@@ -48,3 +48,13 @@ class GHContributions:
     @property
     def current_level(self) -> int:
         return self.year[-1][-1]['level']
+
+    @property
+    def to_level_up(self) -> int:
+        return {
+            0: 1,
+            1: 3 - self.today,
+            2: 5 - self.today,
+            3: 10 - self.today,
+            4: 0
+        }[self.current_level]
