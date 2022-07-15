@@ -4,11 +4,7 @@ from .gh import GHContributions
 from .utils import *
 
 
-@click.group()
-def cli():
-    pass
-
-@cli.command()
+@click.command()
 @click.argument("username")
 @click.option("--today", is_flag=True, help="Today's contribution count.")
 @click.option("--this-week", is_flag=True,
@@ -20,7 +16,7 @@ def cli():
 @click.option("--next-level", is_flag=True,
               help="Minimum amount of contributions needed to level up.")
 @click.option("--goal", type=int, help="Set your daily goal of contributions.")
-def gh(username, today, this_week, this_year, current_level, next_level, goal):
+def dotbs(username, today, this_week, this_year, current_level, next_level, goal):
     if goal:
         set_gh_goal(goal)
         click.echo("GH Goal Set.")
