@@ -17,7 +17,7 @@ from .utils import *
               help="Minimum amount of contributions needed to level up.")
 @click.option("--streak", is_flag=True, help="Streak of daily contributios.")
 @click.option("--goal", type=int, help="Set your daily goal of contributions.")
-def dotbs(username, today, this_week, this_year, current_level, next_level,
+def dontbs(username, today, this_week, this_year, current_level, next_level,
           streak, goal):
     if goal:
         set_gh_goal(goal)
