@@ -58,3 +58,14 @@ class GHContributions:
             3: 10 - self.today,
             4: 0
         }[self.current_level]
+
+    @property
+    def streak(self) -> int:
+        s = 0
+        for week in reversed(self.year):
+            for day in reversed(week):
+                if day['count'] == 0:
+                    break
+                s += 1
+        return s
+                

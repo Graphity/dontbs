@@ -15,8 +15,10 @@ from .utils import *
               help="Current level based on today's contribution count.")
 @click.option("--next-level", is_flag=True,
               help="Minimum amount of contributions needed to level up.")
+@click.option("--streak", is_flag=True, help="Streak of daily contributios.")
 @click.option("--goal", type=int, help="Set your daily goal of contributions.")
-def dotbs(username, today, this_week, this_year, current_level, next_level, goal):
+def dotbs(username, today, this_week, this_year, current_level, next_level,
+          streak, goal):
     if goal:
         set_gh_goal(goal)
         click.echo("GH Goal Set.")
@@ -85,3 +87,12 @@ def dotbs(username, today, this_week, this_year, current_level, next_level, goal
         else:
             nl = contributions.current_level + 1
             click.echo(f"{c} contributions away from level {nl}")
+
+    if streak:
+        s = contributions.streak
+        if s == 0:
+            click.echo(click.style(s, fg="red"))
+        elif s > 0 and s < 10:
+            click.echo(click.style(s, fg="green"))
+        else:
+            click.echo(click.style(s, fg="yellow"))
