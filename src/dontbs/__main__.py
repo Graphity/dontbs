@@ -89,7 +89,3 @@ def gh(username, today, this_week, this_year, current_level, next_level, goal):
         else:
             nl = contributions.current_level + 1
             click.echo(f"{c} contributions away from level {nl}")
-
-
-if __name__ == '__main__':
-    cli()
