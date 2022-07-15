@@ -24,3 +24,6 @@ classifiers = [
 [project.urls]
 "Homepage" = "https://github.com/Graphity/dontbs"
 "Bug Tracker" = "https://github.com/Graphity/dontbs/issues"
+
+[project.scripts]
+dontbs = "dontbs.__main__:dontbs"
