@@ -7,6 +7,8 @@ class GHContributions:
     
     def __init__(self, username: str) -> None:
         r = requests.get(self.url.format(username))
+        if r.status_code != requests.codes.ok:
+            raise ValueError('Incorrect GitHub Username')
         self.soup = BeautifulSoup(r.content, 'html.parser')
         self.year = []
         table = self.soup.find('svg').find('g')
