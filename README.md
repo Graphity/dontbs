@@ -1,13 +1,13 @@
-#+TITLE: Don't Bullshit
+# Don't Bullshit
 
-** What can you do with dontbs
-- Set the daily goal of your GitHub contributions
-- Check your progress
-- Don't do shit and watch how this stupid script insults you all day
-- Reach your goal and get nothing
+## What can you do with dontbs
+* Set the daily goal of your GitHub contributions
+* Check your progress
+* Don't do shit and watch how this stupid script insults you all day
+* Reach your goal and get nothing
 
-** Usage
-#+begin_src console
+## Usage
+```console
 Usage: dontbs [OPTIONS] USERNAME
 
 Options:
@@ -19,9 +19,9 @@ Options:
   --streak         Streak of daily contributios.
   --goal INTEGER   Set your daily goal of contributions.
   --help           Show this message and exit.
-#+end_src
+```
 
-** Installation
-#+begin_src console
+## Installation
+```console
 pip install dontbs
-#+end_src
+```
