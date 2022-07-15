@@ -67,7 +67,7 @@ class GHContributions:
         for week in reversed(self.year):
             for day in reversed(week):
                 if day['count'] == 0:
-                    break
+                    return s
                 s += 1
         return s
                 
