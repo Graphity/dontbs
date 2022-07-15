@@ -41,6 +41,8 @@ def dontbs(username, today, this_week, this_year, current_level, next_level,
             click.echo(click.style(insult, fg="red"))
         else:
             click.echo(click.style(f"{c} Contributions", fg="green"))
+            if goal < 1:
+                return
             if c >= goal:
                 click.echo(click.style("Daily goal reached!", fg="yellow"))
             else:
