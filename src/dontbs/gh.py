@@ -70,4 +70,3 @@ class GHContributions:
                     return s
                 s += 1
         return s
-                
